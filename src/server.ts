@@ -5,5 +5,9 @@ const app = express();
 app.listen(3333, () => console.log("Server está rodando"));
 
 app.get('/', (request, response) => {
-    return response.send("Olá NLW #5");
+    return response.json(
+        {
+            data: "Olá NLW #5"
+        }
+    );
 })
