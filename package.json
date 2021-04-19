@@ -4,6 +4,9 @@
   "main": "index.js",
   "author": "Thiago Augusto Gonçalves Fernandes Santos Silva <wstagf@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev src/server.ts"
+  },
   "dependencies": {
     "express": "^4.17.1"
   },
