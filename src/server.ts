@@ -11,3 +11,12 @@ app.get('/', (request, response) => {
         }
     );
 })
+
+
+app.post('/users',(request, response) => {
+    return response.json(
+        {
+            mensagem: "Usuario salvo com sucesso"
+        }
+    );
+});
