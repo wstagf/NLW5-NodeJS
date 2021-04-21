@@ -1,4 +1,4 @@
-import { response, Router } from "express";
+import { Router } from "express";
 import { getCustomRepository } from "typeorm";
 import { SettingsRepository } from "./repositories/SettingsRepository";
 
@@ -14,7 +14,7 @@ routes.post("/settings", async (req, res) => {
 
     await settingsRepository.save(settings);
 
-    return response.json(settings);
+    return res.json(settings);
 
 })
 
