@@ -1,23 +1,9 @@
 import express from 'express';
 import "./database";
-
+import { routes } from "./routes";
 const app = express();
 
-app.listen(3333, () => console.log("Server está rodando"));
+app.use(routes);
 
-app.get('/', (request, response) => {
-    return response.json(
-        {
-            data: "Olá NLW #5"
-        }
-    );
-})
+app.listen(3333, () => console.log("Server está rodando na  porta 3333"));
 
-
-app.post('/users',(request, response) => {
-    return response.json(
-        {
-            mensagem: "Usuario salvo com sucesso"
-        }
-    );
-});
